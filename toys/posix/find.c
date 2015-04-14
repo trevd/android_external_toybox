@@ -377,16 +377,14 @@ static int do_find(struct dirtree *new)
             struct stat st;
 
             xstat(ss[1], &st);
-            udl->u.tm = st.st_mtim;
+            //udl->u.tm = st.st_mtime->sec;
           }
         } else if (check) {
           udl = (void *)llist_pop(&argdata);
           if (*s == 'u') test = new->st.st_uid == udl->u.uid;
           else if (*s == 'g') test = new->st.st_gid == udl->u.gid;
           else {
-            test = new->st.st_mtim.tv_sec > udl->u.tm.tv_sec;
-            if (new->st.st_mtim.tv_sec == udl->u.tm.tv_sec)
-              test = new->st.st_mtim.tv_nsec > udl->u.tm.tv_nsec;
+
           }
         }
       } else if (!strcmp(s, "exec") || !strcmp("ok", s)

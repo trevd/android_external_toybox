@@ -64,9 +64,9 @@
 #undef FLAG_d
 #endif
 
-// basename <1>2 <1>2
+// basename   <1>2
 #undef OPTSTR_basename
-#define OPTSTR_basename "<1>2"
+#define OPTSTR_basename  0 
 #ifdef CLEANUP_basename
 #undef CLEANUP_basename
 #undef FOR_basename
@@ -277,9 +277,9 @@
 #undef FOR_count
 #endif
 
-// cp <2RHLPprdaslvnF(remove-destination)fi[-HLPd][-ni] <2RHLPprdaslvnF(remove-destination)fi[-HLPd][-ni]
+// cp   <2RHLPprdaslvnF(remove-destination)fi[-HLPd][-ni]
 #undef OPTSTR_cp
-#define OPTSTR_cp "<2RHLPprdaslvnF(remove-destination)fi[-HLPd][-ni]"
+#define OPTSTR_cp  0 
 #ifdef CLEANUP_cp
 #undef CLEANUP_cp
 #undef FOR_cp
@@ -362,9 +362,9 @@
 #undef FLAG_b
 #endif
 
-// date d:s:r:u[!dr] d:s:r:u[!dr]
+// date   d:s:r:u[!dr]
 #undef OPTSTR_date
-#define OPTSTR_date "d:s:r:u[!dr]"
+#define OPTSTR_date  0 
 #ifdef CLEANUP_date
 #undef CLEANUP_date
 #undef FOR_date
@@ -984,9 +984,9 @@
 #undef FOR_insmod
 #endif
 
-// install <1cdDpsvm:o:g: <1cdDpsvm:o:g:
+// install   <1cdDpsvm:o:g:
 #undef OPTSTR_install
-#define OPTSTR_install "<1cdDpsvm:o:g:"
+#define OPTSTR_install  0 
 #ifdef CLEANUP_install
 #undef CLEANUP_install
 #undef FOR_install
@@ -1430,9 +1430,9 @@
 #undef FLAG_q
 #endif
 
-// mv <2vnFfi[-ni] <2vnFfi[-ni]
+// mv   <2vnFfi[-ni]
 #undef OPTSTR_mv
-#define OPTSTR_mv "<2vnFfi[-ni]"
+#define OPTSTR_mv  0 
 #ifdef CLEANUP_mv
 #undef CLEANUP_mv
 #undef FOR_mv
@@ -1453,9 +1453,9 @@
 #undef FLAG_n
 #endif
 
-// netcat ^tlLw#p#s:q#f: ^tlLw#p#s:q#f:
+// netcat   ^tlLw#p#s:q#f:
 #undef OPTSTR_netcat
-#define OPTSTR_netcat "^tlLw#p#s:q#f:"
+#define OPTSTR_netcat  0 
 #ifdef CLEANUP_netcat
 #undef CLEANUP_netcat
 #undef FOR_netcat
@@ -1469,9 +1469,9 @@
 #undef FLAG_t
 #endif
 
-// netstat pWrxwutneal pWrxwutneal
+// netstat   pWrxwutneal
 #undef OPTSTR_netstat
-#define OPTSTR_netstat "pWrxwutneal"
+#define OPTSTR_netstat  0 
 #ifdef CLEANUP_netstat
 #undef CLEANUP_netstat
 #undef FOR_netstat
@@ -1856,9 +1856,9 @@
 #undef FLAG_w
 #endif
 
-// route ?neA: ?neA:
+// route   ?neA:
 #undef OPTSTR_route
-#define OPTSTR_route "?neA:"
+#define OPTSTR_route  0 
 #ifdef CLEANUP_route
 #undef CLEANUP_route
 #undef FOR_route
@@ -2325,9 +2325,9 @@
 #undef FLAG_d
 #endif
 
-// touch acd:mr:t:h[!dtr] acd:mr:t:h[!dtr]
+// touch   acd:mr:t:h[!dtr]
 #undef OPTSTR_touch
-#define OPTSTR_touch "acd:mr:t:h[!dtr]"
+#define OPTSTR_touch  0 
 #ifdef CLEANUP_touch
 #undef CLEANUP_touch
 #undef FOR_touch
@@ -2888,22 +2888,22 @@
 #ifndef TT
 #define TT this.cp
 #endif
-#define FLAG_i (1<<0)
-#define FLAG_f (1<<1)
-#define FLAG_remove_destination (1<<2)
-#define FLAG_F (1<<2)
-#define FLAG_n (1<<3)
-#define FLAG_v (1<<4)
-#define FLAG_l (1<<5)
-#define FLAG_s (1<<6)
-#define FLAG_a (1<<7)
-#define FLAG_d (1<<8)
-#define FLAG_r (1<<9)
-#define FLAG_p (1<<10)
-#define FLAG_P (1<<11)
-#define FLAG_L (1<<12)
-#define FLAG_H (1<<13)
-#define FLAG_R (1<<14)
+#define FLAG_i (FORCED_FLAG<<0)
+#define FLAG_f (FORCED_FLAG<<1)
+#define FLAG_remove_destination (FORCED_FLAG<<2)
+#define FLAG_F (FORCED_FLAG<<2)
+#define FLAG_n (FORCED_FLAG<<3)
+#define FLAG_v (FORCED_FLAG<<4)
+#define FLAG_l (FORCED_FLAG<<5)
+#define FLAG_s (FORCED_FLAG<<6)
+#define FLAG_a (FORCED_FLAG<<7)
+#define FLAG_d (FORCED_FLAG<<8)
+#define FLAG_r (FORCED_FLAG<<9)
+#define FLAG_p (FORCED_FLAG<<10)
+#define FLAG_P (FORCED_FLAG<<11)
+#define FLAG_L (FORCED_FLAG<<12)
+#define FLAG_H (FORCED_FLAG<<13)
+#define FLAG_R (FORCED_FLAG<<14)
 #endif
 
 #ifdef FOR_cpio
@@ -2963,10 +2963,10 @@
 #ifndef TT
 #define TT this.date
 #endif
-#define FLAG_u (1<<0)
-#define FLAG_r (1<<1)
-#define FLAG_s (1<<2)
-#define FLAG_d (1<<3)
+#define FLAG_u (FORCED_FLAG<<0)
+#define FLAG_r (FORCED_FLAG<<1)
+#define FLAG_s (FORCED_FLAG<<2)
+#define FLAG_d (FORCED_FLAG<<3)
 #endif
 
 #ifdef FOR_dd
@@ -3483,15 +3483,15 @@
 #ifndef TT
 #define TT this.install
 #endif
-#define FLAG_g (1<<0)
-#define FLAG_o (1<<1)
-#define FLAG_m (1<<2)
-#define FLAG_v (1<<3)
-#define FLAG_s (1<<4)
-#define FLAG_p (1<<5)
-#define FLAG_D (1<<6)
-#define FLAG_d (1<<7)
-#define FLAG_c (1<<8)
+#define FLAG_g (FORCED_FLAG<<0)
+#define FLAG_o (FORCED_FLAG<<1)
+#define FLAG_m (FORCED_FLAG<<2)
+#define FLAG_v (FORCED_FLAG<<3)
+#define FLAG_s (FORCED_FLAG<<4)
+#define FLAG_p (FORCED_FLAG<<5)
+#define FLAG_D (FORCED_FLAG<<6)
+#define FLAG_d (FORCED_FLAG<<7)
+#define FLAG_c (FORCED_FLAG<<8)
 #endif
 
 #ifdef FOR_ip
@@ -3855,11 +3855,11 @@
 #ifndef TT
 #define TT this.mv
 #endif
-#define FLAG_i (1<<0)
-#define FLAG_f (1<<1)
-#define FLAG_F (1<<2)
-#define FLAG_n (1<<3)
-#define FLAG_v (1<<4)
+#define FLAG_i (FORCED_FLAG<<0)
+#define FLAG_f (FORCED_FLAG<<1)
+#define FLAG_F (FORCED_FLAG<<2)
+#define FLAG_n (FORCED_FLAG<<3)
+#define FLAG_v (FORCED_FLAG<<4)
 #endif
 
 #ifdef FOR_nbd_client
@@ -3874,31 +3874,31 @@
 #ifndef TT
 #define TT this.netcat
 #endif
-#define FLAG_f (1<<0)
-#define FLAG_q (1<<1)
-#define FLAG_s (1<<2)
-#define FLAG_p (1<<3)
-#define FLAG_w (1<<4)
-#define FLAG_L (1<<5)
-#define FLAG_l (1<<6)
-#define FLAG_t (1<<7)
+#define FLAG_f (FORCED_FLAG<<0)
+#define FLAG_q (FORCED_FLAG<<1)
+#define FLAG_s (FORCED_FLAG<<2)
+#define FLAG_p (FORCED_FLAG<<3)
+#define FLAG_w (FORCED_FLAG<<4)
+#define FLAG_L (FORCED_FLAG<<5)
+#define FLAG_l (FORCED_FLAG<<6)
+#define FLAG_t (FORCED_FLAG<<7)
 #endif
 
 #ifdef FOR_netstat
 #ifndef TT
 #define TT this.netstat
 #endif
-#define FLAG_l (1<<0)
-#define FLAG_a (1<<1)
-#define FLAG_e (1<<2)
-#define FLAG_n (1<<3)
-#define FLAG_t (1<<4)
-#define FLAG_u (1<<5)
-#define FLAG_w (1<<6)
-#define FLAG_x (1<<7)
-#define FLAG_r (1<<8)
-#define FLAG_W (1<<9)
-#define FLAG_p (1<<10)
+#define FLAG_l (FORCED_FLAG<<0)
+#define FLAG_a (FORCED_FLAG<<1)
+#define FLAG_e (FORCED_FLAG<<2)
+#define FLAG_n (FORCED_FLAG<<3)
+#define FLAG_t (FORCED_FLAG<<4)
+#define FLAG_u (FORCED_FLAG<<5)
+#define FLAG_w (FORCED_FLAG<<6)
+#define FLAG_x (FORCED_FLAG<<7)
+#define FLAG_r (FORCED_FLAG<<8)
+#define FLAG_W (FORCED_FLAG<<9)
+#define FLAG_p (FORCED_FLAG<<10)
 #endif
 
 #ifdef FOR_nice
@@ -4207,9 +4207,9 @@
 #ifndef TT
 #define TT this.route
 #endif
-#define FLAG_A (1<<0)
-#define FLAG_e (1<<1)
-#define FLAG_n (1<<2)
+#define FLAG_A (FORCED_FLAG<<0)
+#define FLAG_e (FORCED_FLAG<<1)
+#define FLAG_n (FORCED_FLAG<<2)
 #endif
 
 #ifdef FOR_runcon
@@ -4600,13 +4600,13 @@
 #ifndef TT
 #define TT this.touch
 #endif
-#define FLAG_h (1<<0)
-#define FLAG_t (1<<1)
-#define FLAG_r (1<<2)
-#define FLAG_m (1<<3)
-#define FLAG_d (1<<4)
-#define FLAG_c (1<<5)
-#define FLAG_a (1<<6)
+#define FLAG_h (FORCED_FLAG<<0)
+#define FLAG_t (FORCED_FLAG<<1)
+#define FLAG_r (FORCED_FLAG<<2)
+#define FLAG_m (FORCED_FLAG<<3)
+#define FLAG_d (FORCED_FLAG<<4)
+#define FLAG_c (FORCED_FLAG<<5)
+#define FLAG_a (FORCED_FLAG<<6)
 #endif
 
 #ifdef FOR_toybox

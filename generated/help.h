@@ -136,7 +136,9 @@
 
 #define help_unshare "usage: unshare [-imnpuUr] COMMAND...\n\nCreate new container namespace(s) for this process and its children, so\nsome attribute is not shared with the parent process.\n\n-i	SysV IPC (message queues, semaphores, shared memory)\n-m	Mount/unmount tree\n-n	Network address, sockets, routing, iptables\n-p	Process IDs and init\n-r	Become root (map current euid/egid to 0/0, implies -U)\n-u	Host and domain names\n-U	UIDs, GIDs, capabilities\n\nA namespace allows a set of processes to have a different view of the\nsystem than other sets of processes.\n\n"
 
-#define help_netcat "usage: netcat [-tu] [-lL COMMAND...] [-wpq #] [-s addr] {IPADDR PORTNUM|-f FILENAME}\n\n-L	listen for multiple incoming connections (server mode).\n-f	use FILENAME (ala /dev/ttyS0) instead of network\n-l	listen for one incoming connection.\n-p	local port number\n-q	SECONDS quit this many seconds after EOF on stdin.\n-s	local ipv4 address\n-t	allocate tty (must come before -l or -L)\n-w	SECONDS timeout for connection\n\nUse \"stty 115200 -F /dev/ttyS0 && stty raw -echo -ctlecho\" with\nnetcat -f to connect to a serial port.\n\nThe command line after -l or -L is executed to handle each incoming\nconnection. If none, the connection is forwarded to stdin/stdout.\n\nFor a quick-and-dirty server, try something like:\nnetcat -s 127.0.0.1 -p 1234 -tL /bin/bash -l\n"
+#define help_netcat_listen "usage: netcat [-t] [-lL COMMAND...]\n\n-t	allocate tty (must come before -l or -L)\n-l	listen for one incoming connection.\n-L	listen for multiple incoming connections (server mode).\n\nThe command line after -l or -L is executed to handle each incoming\nconnection. If none, the connection is forwarded to stdin/stdout.\n\nFor a quick-and-dirty server, try something like:\nnetcat -s 127.0.0.1 -p 1234 -tL /bin/bash -l\n\n"
+
+#define help_netcat "usage: netcat [-u] [-wpq #] [-s addr] {IPADDR PORTNUM|-f FILENAME}\n\n-f	use FILENAME (ala /dev/ttyS0) instead of network\n-p	local port number\n-q	SECONDS quit this many seconds after EOF on stdin.\n-s	local ipv4 address\n-w	SECONDS timeout for connection\n\nUse \"stty 115200 -F /dev/ttyS0 && stty raw -echo -ctlecho\" with\nnetcat -f to connect to a serial port.\n\n"
 
 #define help_nbd_client "usage: nbd-client [-ns] HOST PORT DEVICE\n\n-n	Do not fork into background\n-s	nbd swap support (lock server into memory)\n\n"
 
@@ -470,9 +472,13 @@
 
 #define help_install "usage: install [-dDpsv] [-o USER] [-g GROUP] [-m MODE] [SOURCE...] DEST\n\nCopy files and set attributes.\n\n-d	Act like mkdir -p\n-D	Create leading directories for DEST\n-g	Make copy belong to GROUP\n-m	Set permissions to MODE\n-o	Make copy belong to USER\n-p	Preserve timestamps\n-s	Call \"strip -p\"\n-v	Verbose\n\n"
 
-#define help_mv "usage: mv [-finv] SOURCE... DEST\"\n\n-f	force copy by deleting destination file\n-i	interactive, prompt before overwriting existing DEST\n-n	no clobber (don't overwrite DEST)\n-v	verbose\n"
+#define help_mv_more "usage: mv [-vn]\n\n-v	verbose\n-n	no clobber (don't overwrite DEST)\n\n"
 
-#define help_cp "usage: cp [-HLPRadfilnprsv] SOURCE... DEST\n\nCopy files from SOURCE to DEST.  If more than one SOURCE, DEST must\nbe a directory.\n-F	delete any existing destination file first (--remove-destination)\n-H	Follow symlinks listed on command line\n-L	Follow all symlinks\n-P	Do not follow symlinks [default]\n-R	recurse into subdirectories (DEST must be a directory)\n-a	same as -dpr\n-d	don't dereference symlinks\n-f	delete destination files we can't write to\n-i	interactive, prompt before overwriting existing DEST\n-l	hard link instead of copy\n-n	no clobber (don't overwrite DEST)\n-p	preserve timestamps, ownership, and permissions\n-r	synonym for -R\n-s	symlink instead of copy\n-v	verbose\n"
+#define help_mv "usage: mv [-fi] SOURCE... DEST\"\n\n-f	force copy by deleting destination file\n-i	interactive, prompt before overwriting existing DEST\n\n"
+
+#define help_cp_more "usage: cp [-adlnrsv]\n\n-a	same as -dpr\n-d	don't dereference symlinks\n-l	hard link instead of copy\n-n	no clobber (don't overwrite DEST)\n-r	synonym for -R\n-s	symlink instead of copy\n-v	verbose\n\n"
+
+#define help_cp "usage: cp [-fipRHLP] SOURCE... DEST\n\nCopy files from SOURCE to DEST.  If more than one SOURCE, DEST must\nbe a directory.\n\n-f	delete destination files we can't write to\n-F	delete any existing destination file first (--remove-destination)\n-i	interactive, prompt before overwriting existing DEST\n-p	preserve timestamps, ownership, and permissions\n-R	recurse into subdirectories (DEST must be a directory)\n-H	Follow symlinks listed on command line\n-L	Follow all symlinks\n-P	Do not follow symlinks [default]\n\n"
 
 #define help_comm "usage: comm [-123] FILE1 FILE2\n\nReads FILE1 and FILE2, which should be ordered, and produces three text\ncolumns as output: lines only in FILE1; lines only in FILE2; and lines\nin both files. Filename \"-\" is a synonym for stdin.\n\n-1 suppress the output column of lines unique to FILE1\n-2 suppress the output column of lines unique to FILE2\n-3 suppress the output column of lines duplicated in FILE1 and FILE2\n\n"
 

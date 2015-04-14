@@ -63,7 +63,6 @@
 #include <wctype.h>
 
 // LSB 4.1 headers
-#include <pty.h>
 #include <sys/ioctl.h>
 #include <sys/statfs.h>
 #include <sys/sysinfo.h>

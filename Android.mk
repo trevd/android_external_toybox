@@ -65,7 +65,6 @@ LOCAL_SRC_FILES := \
     toys/android/setenforce.c \
     toys/android/setprop.c \
     toys/lsb/dmesg.c \
-    toys/lsb/hostname.c \
     toys/lsb/killall.c \
     toys/lsb/md5sum.c \
     toys/lsb/mknod.c \
@@ -103,7 +102,6 @@ LOCAL_SRC_FILES := \
     toys/other/modinfo.c \
     toys/other/mountpoint.c \
     toys/other/nbd_client.c \
-    toys/other/netcat.c \
     toys/other/partprobe.c \
     toys/other/pivot_root.c \
     toys/other/pmap.c \
@@ -135,8 +133,6 @@ LOCAL_SRC_FILES := \
     toys/pending/more.c \
     toys/pending/pgrep.c \
     toys/pending/ps.c \
-    toys/pending/netstat.c \
-    toys/pending/route.c \
     toys/pending/tar.c \
     toys/pending/top.c \
     toys/pending/tr.c \
@@ -149,10 +145,8 @@ LOCAL_SRC_FILES := \
     toys/posix/cksum.c \
     toys/posix/cmp.c \
     toys/posix/comm.c \
-    toys/posix/cp.c \
     toys/posix/cpio.c \
     toys/posix/cut.c \
-    toys/posix/date.c \
     toys/posix/df.c \
     toys/posix/dirname.c \
     toys/posix/du.c \
@@ -188,7 +182,6 @@ LOCAL_SRC_FILES := \
     toys/posix/tail.c \
     toys/posix/tee.c \
     toys/posix/time.c \
-    toys/posix/touch.c \
     toys/posix/true.c \
     toys/posix/tty.c \
     toys/posix/uname.c \
@@ -236,10 +229,8 @@ ALL_TOOLS := \
     clear \
     comm \
     cmp \
-    cp \
     cpio \
     cut \
-    date \
     dirname \
     dmesg \
     dos2unix \
@@ -255,7 +246,6 @@ ALL_TOOLS := \
     getprop \
     groups \
     head \
-    hostname \
     hwclock \
     id \
     ifconfig \
@@ -279,7 +269,6 @@ ALL_TOOLS := \
     more \
     mountpoint \
     mv \
-    netstat \
     nice \
     nl \
     nohup \
@@ -299,7 +288,6 @@ ALL_TOOLS := \
     rm \
     rmdir \
     rmmod \
-    route \
     runcon \
     sed \
     seq \
@@ -323,7 +311,6 @@ ALL_TOOLS := \
     tee \
     time \
     timeout \
-    touch \
     tr \
     true \
     truncate \
@@ -331,6 +318,7 @@ ALL_TOOLS := \
     uname \
     uniq \
     unix2dos \
+    usleep \
     usleep \
     vmstat \
     wc \

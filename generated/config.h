@@ -10,8 +10,8 @@
 #define USE_TOYBOX_UTMPX(...) __VA_ARGS__
 #define CFG_TOYBOX_SHADOW 1
 #define USE_TOYBOX_SHADOW(...) __VA_ARGS__
-#define CFG_BASENAME 1
-#define USE_BASENAME(...) __VA_ARGS__
+#define CFG_BASENAME 0
+#define USE_BASENAME(...)
 #define CFG_CAL 1
 #define USE_CAL(...) __VA_ARGS__
 #define CFG_CAT 1
@@ -30,22 +30,22 @@
 #define USE_CMP(...) __VA_ARGS__
 #define CFG_COMM 1
 #define USE_COMM(...) __VA_ARGS__
-#define CFG_CP 1
-#define USE_CP(...) __VA_ARGS__
-#define CFG_CP_MORE 1
-#define USE_CP_MORE(...) __VA_ARGS__
-#define CFG_MV 1
-#define USE_MV(...) __VA_ARGS__
-#define CFG_MV_MORE 1
-#define USE_MV_MORE(...) __VA_ARGS__
-#define CFG_INSTALL 1
-#define USE_INSTALL(...) __VA_ARGS__
+#define CFG_CP 0
+#define USE_CP(...)
+#define CFG_CP_MORE 0
+#define USE_CP_MORE(...)
+#define CFG_MV 0
+#define USE_MV(...)
+#define CFG_MV_MORE 0
+#define USE_MV_MORE(...)
+#define CFG_INSTALL 0
+#define USE_INSTALL(...)
 #define CFG_CPIO 1
 #define USE_CPIO(...) __VA_ARGS__
 #define CFG_CUT 1
 #define USE_CUT(...) __VA_ARGS__
-#define CFG_DATE 1
-#define USE_DATE(...) __VA_ARGS__
+#define CFG_DATE 0
+#define USE_DATE(...)
 #define CFG_DF 1
 #define USE_DF(...) __VA_ARGS__
 #define CFG_DIRNAME 1
@@ -142,8 +142,8 @@
 #define USE_TEE(...) __VA_ARGS__
 #define CFG_TIME 1
 #define USE_TIME(...) __VA_ARGS__
-#define CFG_TOUCH 1
-#define USE_TOUCH(...) __VA_ARGS__
+#define CFG_TOUCH 0
+#define USE_TOUCH(...)
 #define CFG_TRUE 1
 #define USE_TRUE(...) __VA_ARGS__
 #define CFG_TTY 1
@@ -258,8 +258,8 @@
 #define USE_MODPROBE(...)
 #define CFG_MORE 1
 #define USE_MORE(...) __VA_ARGS__
-#define CFG_NETSTAT 1
-#define USE_NETSTAT(...) __VA_ARGS__
+#define CFG_NETSTAT 0
+#define USE_NETSTAT(...)
 #define CFG_OPENVT 0
 #define USE_OPENVT(...)
 #define CFG_DEALLOCVT 0
@@ -272,8 +272,8 @@
 #define USE_PS(...) __VA_ARGS__
 #define CFG_RESET 0
 #define USE_RESET(...)
-#define CFG_ROUTE 1
-#define USE_ROUTE(...) __VA_ARGS__
+#define CFG_ROUTE 0
+#define USE_ROUTE(...)
 #define CFG_SH 0
 #define USE_SH(...)
 #define CFG_EXIT 0
@@ -388,10 +388,10 @@
 #define USE_MOUNTPOINT(...) __VA_ARGS__
 #define CFG_NBD_CLIENT 1
 #define USE_NBD_CLIENT(...) __VA_ARGS__
-#define CFG_NETCAT 1
-#define USE_NETCAT(...) __VA_ARGS__
-#define CFG_NETCAT_LISTEN 1
-#define USE_NETCAT_LISTEN(...) __VA_ARGS__
+#define CFG_NETCAT 0
+#define USE_NETCAT(...)
+#define CFG_NETCAT_LISTEN 0
+#define USE_NETCAT_LISTEN(...)
 #define CFG_UNSHARE 0
 #define USE_UNSHARE(...)
 #define CFG_NSENTER 0
@@ -460,8 +460,8 @@
 #define USE_YES(...) __VA_ARGS__
 #define CFG_DMESG 1
 #define USE_DMESG(...) __VA_ARGS__
-#define CFG_HOSTNAME 1
-#define USE_HOSTNAME(...) __VA_ARGS__
+#define CFG_HOSTNAME 0
+#define USE_HOSTNAME(...)
 #define CFG_KILLALL 1
 #define USE_KILLALL(...) __VA_ARGS__
 #define CFG_MD5SUM 1
