@@ -268,7 +268,6 @@ ALL_TOOLS := \
     modinfo \
     more \
     mountpoint \
-    mv \
     nice \
     nl \
     nohup \
