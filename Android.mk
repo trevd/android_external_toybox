@@ -284,6 +284,7 @@ ALL_TOOLS := \
     readlink \
     realpath \
     restorecon \
+    rfkill \
     rm \
     rmdir \
     rmmod \
